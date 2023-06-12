@@ -1,7 +1,8 @@
+<% require 'application_helper' %>
 <h1>Welcome</h1>
+
+<%=render "menu" %>
 
 <p>Hello world</p>
 
-
-
-<p> a data de hoje é <%=  Date.today %> </p>
+<p> a data de hoje é <%=  date_br(Date.today) %> </p>
