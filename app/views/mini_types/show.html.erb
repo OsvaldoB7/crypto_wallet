@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @mini_type %>
+
+<div>
+  <%= link_to "Edit this mini type", edit_mini_type_path(@mini_type) %> |
+  <%= link_to "Back to mini types", mini_types_path %>
+
+  <%= button_to "Destroy this mini type", @mini_type, method: :delete %>
+</div>

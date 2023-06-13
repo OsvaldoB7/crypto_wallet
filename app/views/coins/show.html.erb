@@ -7,4 +7,5 @@
   <%= link_to "Back to coins", coins_path %>
 
   <%= button_to "Destroy this coin", @coin, method: :delete %>
+  <p><%= image_tag coin.url_image, size: "30x30" %></p>
 </div>
