@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :mini_types
+  resources :mining_types
   get 'welcome/index'
   resources :coins
   root to: 'welcome#index'

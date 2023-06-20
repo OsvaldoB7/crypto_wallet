@@ -1,2 +1,0 @@
-class MiniType < ApplicationRecord
-end

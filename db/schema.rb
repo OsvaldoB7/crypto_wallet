@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_13_140124) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_19_132649) do
   create_table "coins", force: :cascade do |t|
     t.string "description"
     t.string "acronym"
     t.string "url_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "mining_types_id"
+    t.index ["mining_types_id"], name: "index_coins_on_mining_types_id"
   end
 
   create_table "mini_types", force: :cascade do |t|
@@ -26,4 +28,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_13_140124) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "mining_types", force: :cascade do |t|
+    t.string "description"
+    t.string "acronym"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "coins", "mining_types", column: "mining_types_id"
 end
